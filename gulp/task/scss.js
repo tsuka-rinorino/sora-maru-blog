@@ -1,3 +1,5 @@
+// config
+const config = require('../config')
 // common
 const { src, dest } = require('gulp')
 const plumber = require('gulp-plumber')
@@ -11,8 +13,6 @@ const cssmqpacker = require('css-mqpacker')
 const sortCSSmq = require('sort-css-media-queries')
 const cleanCSS = require('gulp-clean-css')
 const sassGlob = require('gulp-sass-glob')
-// config
-const config = require('../config')
 
 // module
 module.exports = () => {
