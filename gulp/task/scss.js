@@ -16,7 +16,7 @@ const sassGlob = require('gulp-sass-glob')
 
 // module
 module.exports = () => {
-  return src(config.path.src + '/scss/*.scss', {
+  return src(config.path.src + '/scss/**/*.scss', {
       sourcemaps: true,
     })
     .pipe(plumber({
@@ -31,7 +31,7 @@ module.exports = () => {
       }),
     ]))
     .pipe(dest(config.path.dist + '/css', {sourcemaps: '.'}))
-    .pipe(browserSync.reload({
+    .pipe(browserSync.stream({
       stream: true
     }))
 }

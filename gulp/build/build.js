@@ -2,9 +2,7 @@ const { series } = require('gulp')
 const config = require('../config')
 // task
 const scss = require('../task/scss')
+const img = require('../task/img')
 
 // module
-module.exports = (done) => {
-  series(scss)
-  done()
-}
+module.exports = series(scss, img)
