@@ -1,0 +1,27 @@
+.footer-nav {
+  $e: &;
+
+  .menu {
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+
+    li {
+      & + li {
+        margin-left: 1.5rem;
+      }
+    }
+
+    a {
+      font-size: 0.75rem;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      color: rgba(#fff, 0.8);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.author {
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  background-color: $oc-gray-1;
+  padding: 1rem 1.5rem;
+
+  &__avatar {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 5rem;
+  }
+
+  &__img,
+  .avatar {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__body {
+    width: calc(100% - 7rem);
+    margin-left: 2rem;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0.125rem;
+  }
+
+  &__profile {
+    font-size: 0.8125rem;
+    line-height: 1.7;
+  }
+}

@@ -1,4 +1,9 @@
-body {
-  color: red;
-  background-color: #ccc;
-}
+@import "setting/open-color";
+@import "setting/variables";
+
+@import "mixin/**";
+
+@import "../../../../../../normalize.css/normalize.css";
+@import "base/reboot";
+
+@import "module/**";

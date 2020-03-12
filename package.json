@@ -20,7 +20,6 @@
   "homepage": "https://github.com/RinoTsuka/sora-maru#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
-    "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
     "css-mqpacker": "^7.0.0",
     "gulp": "^4.0.2",
@@ -30,6 +29,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.1.0",
+    "normalize.css": "^8.0.1",
     "sort-css-media-queries": "^1.5.0"
   }
 }

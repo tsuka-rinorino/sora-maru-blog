@@ -31,7 +31,7 @@ module.exports = () => {
       }),
     ]))
     .pipe(dest(config.path.dist + '/css', {sourcemaps: '.'}))
-    .pipe(browserSync.stream({
+    .pipe(browserSync.reload({
       stream: true
     }))
 }

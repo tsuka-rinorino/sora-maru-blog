@@ -8,5 +8,6 @@ module.exports = (done) => {
   browserSync({
     proxy: config.server
   })
+  console.log('server');
   done()
 }

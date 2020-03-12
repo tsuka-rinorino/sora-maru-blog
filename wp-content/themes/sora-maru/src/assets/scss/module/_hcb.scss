@@ -1,0 +1,29 @@
+.hcb_wrap {
+
+
+  pre {
+    overflow: hidden;
+    border-radius: 0.25rem !important;
+    background-color: #2a3f51 !important;
+    padding: 2.25rem 1.75rem 1.5rem !important;
+    &::before {
+      left: 0;
+      right: auto !important;
+      border-top-left-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+      background-color: #17232c !important;
+      font-family: $font-family-sans-serif !important;
+      padding: 0.25rem 0.75rem !important;
+    }
+
+    code {
+      text-shadow: 0 1px #2a3f51 !important;
+      background: #2a3f51 !important;
+    }
+  }
+  pre[data-file] {
+    &::before {
+      background-image: none !important;
+    }
+  }
+}

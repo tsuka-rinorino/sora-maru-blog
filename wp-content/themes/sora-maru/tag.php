@@ -1,13 +1,38 @@
+<?php
+add_filter( 'get_the_archive_title', function ($title) {
+  if (is_category()) {
+    $title = single_cat_title('',false);
+  } elseif (is_tag()) {
+    $title = single_tag_title('',false);
+  } elseif (is_tax()) {
+    $title = single_term_title('',false);
+  } elseif (is_post_type_archive() ){
+    $title = post_type_archive_title('',false);
+  } elseif (is_date()) {
+    $title = get_the_time('Y年n月');
+  } elseif (is_search()) {
+    $title = '検索結果：'.esc_html( get_search_query(false) );
+  } elseif (is_404()) {
+    $title = '「404」ページが見つかりません';
+  } else {
+  }
+
+  return $title;
+});
+?>
 <?php get_header(); ?>
+
 
 <div class="posts">
   <header class="posts__header">
-    <h1 class="logo">
+    <div class="logo">
       <a class="logo__link" href="#">
         <img class="logo__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.jpg" alt="そらまる">
       </a>
-    </h1>
+    </div>
   </header>
+
+  <?php the_archive_title( '<h1 class="heading--1">', '</h1>' ); ?>
 
   <div class="posts__list">
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
