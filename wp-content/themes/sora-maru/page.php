@@ -1,70 +1,57 @@
 <?php get_header(); ?>
 
-<article class="post">
-  <header class="post__header">
-    <div class="post__heading">
-      <div class="logo">
-        <a class="logo__link" href="<?php echo home_url() ?>">
-          <img class="logo__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.jpg" alt="">
-        </a>
-      </div>
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
+  <article class="post">
+    <header class="post__header">
+      <div class="post__heading">
+        <div class="logo">
+          <a class="logo__link" href="<?php echo home_url() ?>">
+            <img class="logo__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.jpg" alt="">
+          </a>
+        </div>
 
-      <h1 class="heading">
-        Mああああああああああああああああああああ
-      </h1>
+        <h1 class="heading">
+          <?php the_title(); ?>
+        </h1>
 
-      <div class="post__meta">
-        <time class="post__date">2020-03-03</time>
-        <div class="category">
-          <ul class="category__list">
-            <li class="category__item">
-              <a class="category__link" href="#">HTML</a>
-            </li>
-            <li class="category__item">
-              <a class="category__link" href="#">CSS</a>
-            </li>
-          </ul>
+        <div class="post__meta">
+          <time class="post__date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y-m-d'); ?></time>
+          <div class="category">
+            <?php the_category(); ?>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="post__body">
-    <p>
-      この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-    </p>
-    <p>
-      この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。<br>
-      この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-    </p>
-  </div>
-
-  <footer class="post__footer">
-    <div class="tags">
-      <ul class="tags__list">
-        <li class="tags__item">
-          <a class="tags__link" href="#">#HTML</a>
-        </li>
-        <li class="tags__item">
-          <a class="tags__link" href="#">#CSS</a>
-        </li>
-      </ul>
+    <div class="post__body">
+      <?php the_content(); ?>
     </div>
 
-    <div class="author">
-      <div class="author__avatar">
-        <img class="author__img" src="https://placehold.jp/150x150.png" alt="">
+    <footer class="post__footer">
+      <div class="tags">
+        <?php the_tags( '<ul class="tags__list"><li class="tags__item">', '</li><li class="tags__item">', '</li></ul>' ); ?>
       </div>
-      <div class="author__body">
-        <div class="author__name">
-          りの
+
+      <div class="author">
+        <?php
+          $blogusers = get_users();
+          $author = get_the_author_meta('id');
+          $author_img = get_avatar($author);
+        ?>
+        <div class="author__avatar">
+          <?php echo $author_img ?>
         </div>
-        <div class="author__profile">
-          この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+        <div class="author__body">
+          <div class="author__name">
+            <?php echo $blogusers[0]->display_name; ?>
+          </div>
+          <div class="author__profile">
+            <?php echo $blogusers[0]->description; ?>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-</article>
+    </footer>
+  </article>
+<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
