@@ -24,7 +24,24 @@
     </header>
 
     <div class="post__body">
+      <?php
+        if (get_field('html_code')) {
+          echo '<div class="code-block code-block--html">';
+          echo '<div class="code-block__title">サンプル</div>';
+          echo get_field('html_code');
+          echo '</div>';
+        }
+      ?>
+
       <?php the_content(); ?>
+
+      <?php
+        if (get_field('css_code')) {
+          echo '<style class="code-block code-block--css">';
+          echo get_field('css_code');
+          echo '</style>';
+        }
+      ?>
     </div>
 
     <footer class="post__footer">
