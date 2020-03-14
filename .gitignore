@@ -16,3 +16,4 @@ Thumbs.db
 !/wp-content/themes/sora-maru
 /wp-includes/*
 /node_modules
+/webhook.php
