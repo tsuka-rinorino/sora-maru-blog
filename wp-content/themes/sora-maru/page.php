@@ -4,7 +4,7 @@
   <header class="post__header">
     <div class="post__heading">
       <div class="logo">
-        <a class="logo__link" href="#">
+        <a class="logo__link" href="<?php echo home_url() ?>">
           <img class="logo__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.jpg" alt="">
         </a>
       </div>

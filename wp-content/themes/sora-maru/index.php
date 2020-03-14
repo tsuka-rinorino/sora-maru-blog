@@ -3,7 +3,7 @@
 <div class="posts">
   <header class="posts__header">
     <h1 class="logo">
-      <a class="logo__link" href="#">
+      <a class="logo__link" href="<?php echo home_url() ?>">
         <img class="logo__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.jpg" alt="そらまる">
       </a>
     </h1>
