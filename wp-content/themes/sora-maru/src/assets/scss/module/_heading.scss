@@ -1,0 +1,20 @@
+.heading {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: 0.025em;
+  color: $oc-gray-9;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &--1 {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.35;
+    letter-spacing: 0.025em;
+    color: $oc-gray-9;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}

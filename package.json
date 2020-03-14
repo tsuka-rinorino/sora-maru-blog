@@ -1,0 +1,35 @@
+{
+  "name": "sora-maru",
+  "version": "1.0.0",
+  "description": "<!DOCTYPE html> <html lang=\"ja\"> <head> \t<meta name=\"viewport\" content=\"width=device-width\" /> \t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /> \t<title>WordPress &#8250; お読みください</title> \t<link rel=\"stylesheet\" href=\"wp-admin/css/install.css?ver=20100228\" type=\"text/css\" /> </head> <body> <h1 id=\"logo\"> \t<a href=\"https://wordpress.org/\"><img alt=\"WordPress\" src=\"wp-admin/images/wordpress-logo.png\" /></a> </h1> <p style=\"text-align: center\">セマンティックな個人情報発信プラットフォーム</p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RinoTsuka/sora-maru.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RinoTsuka/sora-maru/issues"
+  },
+  "homepage": "https://github.com/RinoTsuka/sora-maru#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "css-mqpacker": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "normalize.css": "^8.0.1",
+    "sort-css-media-queries": "^1.5.0"
+  }
+}

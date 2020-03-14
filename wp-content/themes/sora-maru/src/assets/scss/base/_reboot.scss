@@ -1,0 +1,38 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: $oc-blue-6;
+  color: #fff;
+}
+::-moz-selection {
+  background-color: $oc-blue-6;
+  color: #fff;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $body-bg;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  letter-spacing: $letter-spacing;
+  color: $body-color;
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+p {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}

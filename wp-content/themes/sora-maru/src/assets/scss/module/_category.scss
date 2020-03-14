@@ -1,0 +1,26 @@
+.category {
+  $e: &;
+
+  .post-categories {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    li {
+      font-size: 0.6875rem;
+      & + #{$e}__item {
+        margin-left: 0.25rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: rgba(#fff, 0.7);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
