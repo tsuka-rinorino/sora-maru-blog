@@ -2,14 +2,12 @@
   $e: &;
 
   .menu {
-    ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-left: 0;
-    }
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 
     li {
       & + li {
